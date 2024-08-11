@@ -1,3 +1,6 @@
+# University of Adelaide - Distributed Systems 2024
+# Fida Matin - a1798239
+# 11 Aug 2024
 JFLAGS = -g
 JC = javac
 .SUFFIXES: .java .class
