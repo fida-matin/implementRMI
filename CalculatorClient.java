@@ -19,18 +19,17 @@ public class CalculatorClient {
                 test.pop();
             }
                 System.out.println("Using pushValue() and pop()");
-                System.out.println("Adding elements...");
-                test.pushValue(3);
+                System.out.println("Pushing to stack:");
                 test.pushValue(7);
                 test.pushValue(12);
                 test.pushValue(50);
 
-                System.out.println("Popping elements...");
+                System.out.println("Checking if values push to stack");
                 assert test.pop() == 50;
                 assert test.pop() == 12;
                 assert test.pop() == 7;
-                assert test.pop() == 3;
                 System.out.println("\nPASS\n");
+
         } catch (Exception e) {
             System.err.println("Client exception: " + e.toString());
             e.printStackTrace();

@@ -10,14 +10,14 @@ public interface Calculator extends Remote {
     // Takes val and push to top of stack.
     void pushValue(int val) throws RemoteException;
 
-    // // Push string containing operator
-    // void pushOperation(String operator) throws RemoteException;
+    // Push string containing operator
+    void pushOperation(String operator) throws RemoteException;
 
     // Pop top of stack and return it to client
     int pop() throws RemoteException;
 
-    // // Wait millis milliseconds before carrying out pop
-    // int delayPop(int millis) throws RemoteException;
+    // Wait millis milliseconds before carrying out pop
+    int delayPop(int millis) throws RemoteException;
 
     // Return true if stack empty
     boolean isEmpty() throws RemoteException;
