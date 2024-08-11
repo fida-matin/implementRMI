@@ -65,15 +65,20 @@ public class CalculatorImplementation implements Calculator {
             // swtich case for running through all operations
             switch (operator) {
                 case "min":
+                    // use turnary statement to store the minimum value
                     calc = (calc_stack.get(i) < calc) ? calc_stack.get(i) : calc;
                     break;
                 case "max":
+                    // use turnary statement to store the maximum value
                     calc = (calc_stack.get(i) > calc) ? calc_stack.get(i) : calc;
                     break;
                 case "lcm":
+                    // LCM (Least common multiple) can be found by
+                    // multiplying the current and  previous value then dividing by their GCD
                     calc = (calc * calc_stack.get(i)) / recursiveGCD(calc, calc_stack.get(i));
                     break;
                 case "gcd":
+                    // Get GCD from running recursive GCD function
                     calc = recursiveGCD(calc, calc_stack.get(i));
                     break;           
             }           
