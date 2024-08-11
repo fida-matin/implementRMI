@@ -12,14 +12,14 @@ CLASSES = \
         CalculatorServer.java \
 
 default: classes
-
-classes: $(CLASSES:.java=.class)
-
-setup: 			CalculatorServer.java
 	@echo " "
 	@echo "KILLING PROCESS FOR RMI:"
 	@echo "To close rmi use 'ps' to get process id and use 'kill -9 PID' to remove process"
 	@echo " "
+
+classes: $(CLASSES:.java=.class)
+
+setup: 			CalculatorServer.java
 	rmiregistry &
 	sleep 2
 	java CalculatorServer
